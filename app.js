@@ -1,7 +1,14 @@
-const express = require('express');
-const app = express();
+var http = require("http");
 
-const port = process.env.port || 80;
-app.listen(port, () => {
-    console.log("Sever console log.")
+var host = 'localhost';
+var port = 80;
+
+var server = http.createServer(function (req, res) {
+    res.end('<h1>Hola Mundo,/h1>');
+});
+
+
+
+server.listen(port, host, () => {
+    console.log(`Server is running on http://${host}`);
 });
