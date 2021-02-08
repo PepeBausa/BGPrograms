@@ -4,7 +4,8 @@ var host = 'localhost';
 var port = 80;
 
 var server = http.createServer(function (req, res) {
-    res.end('<h1>Hola Mundo,/h1>');
+    res.writeHead(200,{'Content-Type' : 'text/html'});
+    res.end('<h1>Hola Mundo</h1>');
 });
 
 
