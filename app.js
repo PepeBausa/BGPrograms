@@ -1,7 +1,7 @@
-const http = require('http');
-const server = http.createServer(function (req, res) {
-    res.writeHead(200, {'content-type': 'text/plain'});
-    res.end('Hola Mundo');
+const express = require('express');
+const app = express();
+
+const port = process.env.port || 80;
+app.listen(port, () => {
+    console.log("Sever console log.")
 });
-server.listen(80);
-console.log('Hola Mundo');
