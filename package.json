@@ -1,19 +1,9 @@
 {
-  "name": "bgprograms",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "name": "Elastic-Beanstalk-Sample-App",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {},
   "scripts": {
-    "start": "sudo node app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/PepeBausa/BGPrograms.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/PepeBausa/BGPrograms/issues"
-  },
-  "homepage": "https://github.com/PepeBausa/BGPrograms#readme"
+    "start": "node app.js"
+  }
 }
