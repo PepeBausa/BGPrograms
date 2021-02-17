@@ -2,8 +2,7 @@
   "name": "bgprograms",
   "version": "0.0.1",
   "private": true,
-  "dependencies": {},
   "scripts": {
-    "start": "node app.js"
+    "start": "node src/app.js"
   }
 }
