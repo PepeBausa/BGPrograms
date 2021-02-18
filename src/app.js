@@ -3,7 +3,7 @@ const app = express();
 const path = require('path');
 
 // settings
-app.set('port', 8080);
+app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs');
@@ -17,5 +17,5 @@ app.use(require('./routes/index.js'));
 
 // listeng the server on port:
 app.listen(app.get('port'),() => {
-    console.log('Server running at http://127.0.0.1:'+ app.get('port') +' hola');
+    console.log('Server running at http://127.0.0.1:'+ app.get('port'));
 })
