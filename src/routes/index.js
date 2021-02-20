@@ -6,7 +6,7 @@ router.get('/', (req,res) => {
     res.render('index.html' , {title: 'BGPrograms'});
 });
 
-router.get('/balneario', (req,res) => {
+router.get('/balnearioilletas', (req,res) => {
     res.render('balneario.html' , {title: 'Balneario Illetas'});
 });
 
