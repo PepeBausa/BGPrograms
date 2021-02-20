@@ -6,8 +6,8 @@ router.get('/', (req,res) => {
     res.render('index.html' , {title: 'BGPrograms'});
 });
 
-router.get('/balnearioilletas', (req,res) => {
-    res.render('balnearioilletas.html' , {title: 'Balneario Illetas'});
+router.get('/bi', (req,res) => {
+    res.render('bi.html' , {title: 'Balneario Illetas'});
 });
 
 module.exports =  router;
