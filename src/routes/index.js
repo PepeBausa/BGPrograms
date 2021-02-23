@@ -6,6 +6,14 @@ router.get('/', (req,res) => {
     res.render('index.html' , {title: 'BGPrograms'});
 });
 
+router.get('/about', (req,res) => {
+    res.render('about.html' , {title: 'BGPrograms'});
+});
+
+router.get('/contact', (req,res) => {
+    res.render('contact.html' , {title: 'BGPrograms'});
+});
+
 router.get('/balneario', (req,res) => {
     res.render('balneario/balnearioilletas.html' , {title: 'Balneario Illetas'});
 });
