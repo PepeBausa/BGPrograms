@@ -22,7 +22,7 @@ poolBGP.getConnection((err, connection) => {
         }
     }
     if (connection) connection.release();
-    console.log('DB IS CONNECTED');
+    console.log('DB BGP IS CONNECTED');
     return;
 
 });
@@ -39,7 +39,7 @@ poolBalneario.getConnection((err, connection) => {
         }
     }
     if (connection) connection.release();
-    console.log('DB IS CONNECTED');
+    console.log('DB BALNEARIO IS CONNECTED');
     return;
 
 });

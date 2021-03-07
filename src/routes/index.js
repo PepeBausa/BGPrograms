@@ -6,15 +6,15 @@ const pool_DB_BGP = require('../database.js')
 
 
 router.get('/', (req,res) => {
-    res.render('index.hbs' , {layout: 'main'});
+    res.render('bgprograms/index.hbs' , {layout: 'main'});
 });
 
 router.get('/about', (req,res) => {
-    res.render('about.hbs' , {layout: 'main'});
+    res.render('bgprograms/about.hbs' , {layout: 'main'});
 });
 
 router.get('/contact', (req,res) => {
-    res.render('contact.hbs' , {layout: 'main'});
+    res.render('bgprograms/contact.hbs' , {layout: 'main'});
 });
 
 router.post('/', async (req, res) =>{
