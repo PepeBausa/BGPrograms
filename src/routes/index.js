@@ -1,37 +1,31 @@
 const express = require('express');
+const poolBGP = require('../database.js');
 const router = express.Router();
+
+const pool_DB_BGP = require('../database.js')
 
 
 router.get('/', (req,res) => {
-    res.render('index.html' , {title: 'BGPrograms'});
+    res.render('index.hbs' , {layout: 'main'});
 });
 
 router.get('/about', (req,res) => {
-    res.render('about.html' , {title: 'BGPrograms'});
+    res.render('about.hbs' , {layout: 'main'});
 });
 
 router.get('/contact', (req,res) => {
-    res.render('contact.html' , {title: 'BGPrograms'});
+    res.render('contact.hbs' , {layout: 'main'});
 });
 
-router.get('/balneario', (req,res) => {
-    res.render('balneario/balnearioilletas.html' , {title: 'Balneario Illetas'});
-});
-
-router.get('/balneario/albaranes', (req,res) => {
-    res.render('balneario/albaranes.html' , {title: 'Balneario Illetas - Albaranes'});
-});
-
-router.get('/balneario/productos', (req,res) => {
-    res.render('balneario/productos.html' , {title: 'Balneario Illetas - Productos'});
-});
-
-router.get('/balneario/proveedores', (req,res) => {
-    res.render('balneario/proveedores.html' , {title: 'Balneario Illetas - Proveedores'});
-});
-
-router.get('/balneario/escandallos', (req,res) => {
-    res.render('balneario/escandallos.html' , {title: 'Balneario Illetas - Escandallos'});
+router.post('/', async (req, res) =>{
+    const { Email, Password } = req.body;
+    const newUser = {
+        Email,
+        Password
+    };
+    console.log(newUser);
+    //await pool_DB_Balneario.query('INSERT INTO Tbl_Usuarios set ?', [newUser]);
+    res.send('recived');
 });
 
 module.exports =  router;
