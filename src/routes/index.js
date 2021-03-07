@@ -24,7 +24,7 @@ router.post('/', async (req, res) =>{
         Password
     };
     console.log(newUser);
-    //await pool_DB_Balneario.query('INSERT INTO Tbl_Usuarios set ?', [newUser]);
+    await pool_DB_BGP.query('INSERT INTO Tbl_Usuarios set ?', [newUser]);
     res.send('recived');
 });
 
