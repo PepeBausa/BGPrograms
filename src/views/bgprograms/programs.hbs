@@ -1,18 +1,18 @@
 <div class="container p-4">
     <div class="row">
         {{#each program}}
-            <div class="col-4 mx-auto">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <h3 class="card-title text-uppercase">
-                            {{title}}
-                        </h3>
-                        <img src="{{image}}" style="width:75%">
-                        <p class="m-2">{{description}}</p>
-                        <a href="{{url}}" target="_blank" class="btn btn-primary">Access</a>
-                    </div>
+        <div class="col-4 mx-auto">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3 class="card-title text-uppercase">
+                        {{title}}
+                    </h3>
+                    <img src="{{image}}" style="width:75%">
+                    <p class="m-2">{{description}}</p>
+                    <a href="{{url}}" target="_blank" class="btn btn-primary">Access</a>
                 </div>
             </div>
+        </div>
         {{/each}}
     </div>
 </div>
