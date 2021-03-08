@@ -17,9 +17,9 @@ alter table Tbl_Usuarios
     
 describe Tbl_Usuarios;
 
--- Tbl_Links
+-- Tbl_Programs
 
-create table Tbl_Links(
+create table Tbl_Programs(
  id int(11) not null,
  title varchar(150) not null,
  url varchar(255) not null,
@@ -29,10 +29,10 @@ create table Tbl_Links(
  constraint fk_user foreign key (user_id) references Tbl_Usuarios(id)
 );
 
-alter table Tbl_Links
+alter table Tbl_Programs
 	add primary key (id);
     
-alter table Tbl_Links
+alter table Tbl_Programs
 		modify id int(11) not null auto_increment, auto_increment=1;
 
-describe Tbl_Links;
+describe Tbl_Programs;

@@ -47,7 +47,6 @@ poolBalneario.getConnection((err, connection) => {
 
 // Promisify Pool Querys
 poolBGP.query = promisify(poolBGP.query);
-module.exports = poolBGP;
-
 poolBalneario.query = promisify(poolBalneario.query);
-module.exports = poolBalneario;
+
+module.exports = {"DBBGP": poolBGP, "DBBalneario": poolBalneario};
