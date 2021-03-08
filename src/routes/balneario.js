@@ -1,6 +1,6 @@
 const express = require('express');
 const {DBBalneario} = require('../database.js');
-const {isLoggedIn} = require('../lib/auth.js');
+const {isLoggedIn, isNotLoggedIn} = require('../lib/auth.js');
 
 const router = express.Router();
 
