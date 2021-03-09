@@ -1,17 +1,13 @@
-const express = require ('express');
-const morgan = require ('morgan');
-const exphbs = require ('express-handlebars');
+const express = require('express');
+const morgan = require('morgan');
+const exphbs = require('express-handlebars');
 const path = require('path');
 const flash = require('connect-flash');
 const session = require('express-session');
 const MySQLStore = require('express-mysql-session');
 const passport = require('passport');
 
-
-const {databaseBGP} = require('./keys.js');
-
-
-
+const { databaseBGP } = require('./keys.js');
 
 
 //Initializations 
@@ -30,6 +26,7 @@ app.engine('.hbs', exphbs({
 }));
 app.set('view engine', '.hbs');
 
+
 // Middelwares
 app.use(session({
     secret: 'BGPSession',
@@ -39,29 +36,31 @@ app.use(session({
 }));
 app.use(flash());
 app.use(morgan('dev'))
-app.use(express.urlencoded({extended : false}));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(passport.initialize());
 app.use(passport.session());
 
+
 //Global Variables
-app.use((req, res, next) =>{
+app.use((req, res, next) => {
     app.locals.success = req.flash('success');
     app.locals.message = req.flash('message');
     app.locals.user = req.user;
     next();
 });
 
+
 // Routes
 app.use(require('./routes/index.js'));
-app.use(require('./routes/authentication'));
+app.use('/auth', require('./routes/authentication'));
 app.use('/balneario', require('./routes/balneario'));
 
 
 // Public
-app.use(express.static(path.join(__dirname,'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Starting The Server
-app.listen(app.get('port'),() => {
-    console.log('Server running at http://127.0.0.1:'+ app.get('port'));
+app.listen(app.get('port'), () => {
+    console.log('Server running at http://127.0.0.1:' + app.get('port'));
 })

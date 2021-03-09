@@ -1,18 +1,20 @@
-<div class="container p-4">
-    <div class="row">
-        {{#each program}}
-        <div class="col-4 mx-auto">
-            <div class="card text-center">
-                <div class="card-body">
-                    <h3 class="card-title text-uppercase">
-                        {{title}}
-                    </h3>
-                    <img src="{{image}}" style="width:75%">
-                    <p class="m-2">{{description}}</p>
-                    <a href="{{url}}" target="_blank" class="btn btn-primary">Access</a>
+<div id="containerBGPrpgrams" class="container-fluid">
+    <div class="container p-4 m-5 mx-auto">
+        <div class="row">
+            {{#each programs}}
+            <div class="col-4 mx-auto my-auto">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h3 class="card-title text-uppercase" style="color: black;">
+                            {{title}}
+                        </h3>
+                        <img src="{{image}}" style="width:75%">
+                        <p class="m-2" style="color: black;">{{description}}</p>
+                        <a href="{{url}}" target="_blank" class="btn btn-primary">Entrar</a>
+                    </div>
                 </div>
             </div>
+            {{/each}}
         </div>
-        {{/each}}
     </div>
 </div>

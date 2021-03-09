@@ -1,9 +1,10 @@
 {{#if success}}
-<div class="container p-4">
+<div class="container p-4 mt-5 mx-auto">
     <div class="row">
         <div class="col-4 mx-auto">
             <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
                 {{success}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         </div>
     </div>
@@ -11,11 +12,12 @@
 {{/if}}
 
 {{#if message}}
-<div class="container p-4">
+<div class="container p-4 mt-5 mx-auto">
     <div class="row">
         <div class="col-4 mx-auto">
             <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
                 {{message}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         </div>
     </div>
